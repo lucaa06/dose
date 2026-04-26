@@ -3,113 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D.O.S.E. — L'antidoto al doomscrolling</title>
-  <meta name="description" content="D.O.S.E. è il primo social network per condividere buone notizie verificate, contenuti positivi e storie che ispirano.">
+  <title>D.O.S.E. — The Positive Internet</title>
+  <meta name="description" content="D.O.S.E. è il social network progettato per condividere buone notizie, contenuti verificati e positività.">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../shared/gdpr.css">
 </head>
 <body>
 
-  <!-- Background Animated Glows -->
-  <div class="bg-glows">
-    <div class="glow-1"></div>
-    <div class="glow-2"></div>
-    <div class="glow-3"></div>
-  </div>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="wrap header-inner">
+  <!-- Floating Header -->
+  <div class="header-wrapper">
+    <header class="header">
       <a href="/" class="logo">
-        <div class="logo-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-          </svg>
-        </div>
+        <div class="logo-dot"></div>
         D.O.S.E.
       </a>
-      <a href="#waitlist" class="header-btn">Entra Ora</a>
-    </div>
-  </header>
+      <a href="#waitlist" class="header-btn">Accedi</a>
+    </header>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero" id="waitlist">
     <div class="wrap">
       <div class="hero-badge reveal">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-        Accesso Anticipato Disponibile
+        <span>Nuovo</span> L'antidoto al doomscrolling
       </div>
       <h1 class="reveal" style="transition-delay: 0.1s;">
-        Smetti di odiare.<br>Inizia a <span>Vivere.</span>
+        The <span class="highlight">Positive</span><br>Internet.
       </h1>
       <p class="reveal" style="transition-delay: 0.2s;">
-        D.O.S.E. è l'antidoto al doomscrolling. Un ecosistema social progettato per farti stare bene. Solo notizie verificatissime dall'AI, zero tossicità, puro impatto positivo sul mondo reale.
+        Un ecosistema social progettato per farti stare bene. Solo storie ispiratrici, notizie verificate dall'AI e impatto reale sul mondo. Niente negatività.
       </p>
       
       <form class="waitlist-form reveal" id="form-hero" style="transition-delay: 0.3s;">
         <input type="email" placeholder="Inserisci la tua email" required>
-        <button type="submit">Riserva il tuo posto</button>
+        <button type="submit">Entra in Waitlist</button>
       </form>
       
       <div class="hero-stats reveal" style="transition-delay: 0.4s;">
-        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 8,500+ iscritti in 48 ore</div>
-        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-tertiary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> 100% Sicuro & Privato</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-light)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 8,500+ utenti registrati</div>
+        <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-light)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Dati 100% protetti</div>
       </div>
     </div>
   </section>
 
-  <!-- Explanation Bento Grid -->
+  <!-- Clean Grid Features -->
   <section class="features" id="features">
     <div class="wrap">
-      <h2 class="features-title reveal">Perché D.O.S.E. spacca?</h2>
+      <h2 class="features-title reveal">Un nuovo modo di vivere i social.</h2>
       
-      <div class="bento">
-        <!-- Card 1 -->
-        <div class="bento-card reveal">
-          <div class="bento-icon icon-ai">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <div class="feature-grid">
+        <!-- Full Width Card -->
+        <div class="feature-card feature-full reveal">
+          <div>
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>Community sana.</h3>
+            <p>Abbiamo rimosso la tossicità alla radice. Nessun incentivo all'odio, solo algoritmi che premiano l'empatia, il supporto reciproco e la verità. Riprenditi il tuo tempo online.</p>
           </div>
-          <h3>Verità assoluta, garantita dall'AI.</h3>
-          <p>Le fake news distruggono le menti. Su D.O.S.E. ogni post viene filtrato e verificato in tempo reale da un modello AI proprietario. Leggi solo la realtà.</p>
+          <div style="background: rgba(255,255,255,0.05); border-radius: 16px; height: 100%; min-height: 200px; display:flex; align-items:center; justify-content:center;">
+             <!-- Placeholder for a sleek abstract graphic -->
+             <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bento-card reveal" style="transition-delay: 0.1s;">
-          <div class="bento-icon icon-heart">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <!-- Half Card 1 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
-          <h3>Niente Troll.<br>Solo Vibrazioni Positive.</h3>
-          <p>Abbiamo rimosso la rabbia dall'algoritmo. L'esperienza è progettata per sollevare il tuo umore, premiare l'empatia e azzerare l'hate speech.</p>
+          <h3>AI Fact-Checking</h3>
+          <p>Le fake news non hanno spazio qui. Un'intelligenza artificiale avanzata verifica fonti e contenuti prima che arrivino nel tuo feed.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bento-card reveal" style="transition-delay: 0.2s;">
-          <div class="bento-icon icon-globe">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <!-- Half Card 2 -->
+        <div class="feature-card reveal" style="transition-delay: 0.1s;">
+          <div class="feature-icon icon-orange">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
-          <h3>Impatto reale, mensile.</h3>
-          <p>Il tempo che passi leggendo fa del bene fisicamente al mondo. Una grossa fetta dei nostri ricavi viene donata a cause benefiche votate da te.</p>
+          <h3>Impatto Reale</h3>
+          <p>Il tempo che passi sull'app si trasforma in donazioni vere. I profitti generati vengono redistribuiti mensilmente a cause benefiche scelte da te.</p>
         </div>
 
-        <!-- Large Card -->
-        <div class="bento-card col-2 bento-large reveal">
-          <div class="bento-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-9 5 18 3-10h6"/></svg>
+        <!-- Half Card 3 -->
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
-          <h3>L'antidoto definitivo al doomscrolling.</h3>
-          <p>
-            I social tradizionali guadagnano facendoti arrabbiare e deprimere. Noi abbiamo costruito il sistema opposto. D.O.S.E. ti fornisce un feed iper-personalizzato di scoperte scientifiche, innovazione green, diritti umani e umanità che trionfa. Esci dall'app sentendoti motivato, non svuotato.
-          </p>
+          <h3>Focus & Velocità</h3>
+          <p>Un'interfaccia ultra-minimale e fulminea. Nessun disturbo, nessuna pubblicità molesta. Solo i contenuti che vuoi leggere.</p>
         </div>
 
-        <!-- Card 4 -->
-        <div class="bento-card reveal" style="transition-delay: 0.1s;">
-          <div class="bento-icon" style="color: var(--brand-accent);">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <!-- Half Card 4 -->
+        <div class="feature-card reveal" style="transition-delay: 0.1s;">
+          <div class="feature-icon icon-dark">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
           </div>
-          <h3>Filtra il Rumore.</h3>
-          <p>Un'interfaccia fulminea e minimale, pensata per focalizzarti al 100% sui contenuti che contano. Nessuna pubblicità invadente.</p>
+          <h3>Globale ma Locale</h3>
+          <p>Storie da tutto il mondo, tradotte automaticamente per farti scoprire iniziative incredibili ovunque esse nascano.</p>
         </div>
       </div>
     </div>
@@ -118,11 +110,11 @@
   <!-- Bottom CTA -->
   <section class="cta">
     <div class="wrap">
-      <h2 class="reveal">Il futuro appartiene agli ottimisti.</h2>
-      <p class="reveal" style="transition-delay: 0.1s;">Il lancio ufficiale avverrà tra poche settimane. Entrando ora nella waitlist sbloccherai funzioni esclusive per sempre.</p>
-      <form class="waitlist-form reveal" id="form-cta" style="transition-delay: 0.2s; max-width: 600px;">
+      <h2 class="reveal">Pronto per iniziare?</h2>
+      <p class="reveal" style="transition-delay: 0.1s;">Lascia la tua email per ottenere l'accesso in anteprima prima del lancio ufficiale globale.</p>
+      <form class="waitlist-form reveal" id="form-cta" style="transition-delay: 0.2s;">
         <input type="email" placeholder="La tua email migliore" required>
-        <button type="submit">Voglio Entrare</button>
+        <button type="submit">Iscriviti Subito</button>
       </form>
     </div>
   </section>
@@ -131,12 +123,12 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="cookie.html">Cookie Policy</a>
-        <a href="termini.html">Termini e Condizioni</a>
-        <a href="#" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Gestisci Cookie</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="cookie.html">Cookie</a>
+        <a href="termini.html">Termini</a>
+        <a href="#" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Preferenze Dati</a>
       </div>
-      <p>© 2026 D.O.S.E. — Progettato per farti stare bene.</p>
+      <p>© 2026 D.O.S.E. — Tutti i diritti riservati.</p>
     </div>
   </footer>
 
@@ -145,7 +137,6 @@
   <script src="../shared/gdpr.js"></script>
   <script src="main.js"></script>
   <script>
-    // Intersection Observer for reveal animations
     document.addEventListener("DOMContentLoaded", () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -158,7 +149,6 @@
       
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       
-      // Auto-reveal elements already in viewport on load
       setTimeout(() => {
         document.querySelectorAll('.reveal').forEach(el => {
           if (el.getBoundingClientRect().top < window.innerHeight) {
