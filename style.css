@@ -216,7 +216,119 @@ button,input{font-family:inherit}
 .reveal-up{opacity:0;transform:translateY(22px);transition:opacity .5s ease calc(var(--d,0s)),transform .5s ease calc(var(--d,0s))}
 .reveal-up.visible{opacity:1;transform:none}
 
-/* ── RESPONSIVE ────────────────────── */
-@media(max-width:1024px){.hero{grid-template-columns:1fr;gap:48px;padding-top:100px}.bento{grid-template-columns:1fr 1fr}.bento-card.span2{grid-column:span 1}}
-@media(max-width:768px){.grid-3{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.nav-links a:not(.btn-nav){display:none}.footer-top{flex-direction:column;gap:32px}.footer-links{gap:28px}}
-@media(max-width:480px){.hero-form{flex-direction:column}.hero-form input,.btn-amber{width:100%;min-width:0}.cta-form{flex-direction:column}}
+/* ── HAMBURGER MENU ─────────────────── */
+.nav-toggle{
+  display:none;
+  flex-direction:column;justify-content:center;align-items:center;
+  gap:5px;width:40px;height:40px;border-radius:10px;
+  background:transparent;border:1.5px solid var(--border);cursor:pointer;
+  padding:8px;transition:background .2s,border-color .2s;flex-shrink:0;
+}
+.nav-toggle span{
+  display:block;width:18px;height:2px;background:var(--text);
+  border-radius:2px;transition:transform .3s,opacity .3s;
+}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── RESPONSIVE ─────────────────────── */
+
+/* Tablet large */
+@media(max-width:1024px){
+  .hero{
+    grid-template-columns:1fr;
+    gap:48px;
+    padding-top:100px;
+    text-align:center;
+  }
+  .hero-left{display:flex;flex-direction:column;align-items:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-stats{justify-content:center}
+  .hero-right{justify-content:center}
+  .feed-stack{max-width:420px}
+  .bento{grid-template-columns:1fr 1fr}
+  .bento-card.span2{grid-column:span 1}
+  .grid-3[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important}
+}
+
+/* Tablet */
+@media(max-width:768px){
+  /* Nav */
+  .nav-toggle{display:flex}
+  .nav-links{
+    display:none;
+    position:absolute;top:66px;left:0;right:0;
+    background:rgba(255,253,247,.98);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    flex-direction:column;gap:0;padding:12px 16px 20px;
+    box-shadow:0 12px 40px rgba(28,16,7,.1);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{
+    padding:12px 16px;font-size:.95rem;border-radius:12px;
+    width:100%;text-align:left;
+  }
+  .btn-nav{margin-top:8px;text-align:center !important}
+
+  /* Sections */
+  .section,.section-warm,.section-teal{padding:70px 20px}
+  .section-head{margin-bottom:40px}
+  .hero{padding:90px 20px 60px;gap:40px}
+  .hero-title{font-size:clamp(2.2rem,8vw,3rem)}
+
+  /* Grids */
+  .grid-3{grid-template-columns:1fr}
+  .grid-3[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important}
+  .bento{grid-template-columns:1fr}
+  .bento-card.span2{grid-column:span 1}
+
+  /* Footer */
+  .footer{padding:48px 20px 28px}
+  .footer-top{flex-direction:column;gap:32px}
+  .footer-brand{flex:none;width:100%}
+  .footer-links{gap:24px}
+  .footer-bot{flex-direction:column;align-items:flex-start;gap:16px}
+}
+
+/* Mobile */
+@media(max-width:480px){
+  /* Nav */
+  .nav-inner{padding:0 16px}
+
+  /* Hero */
+  .hero{padding:80px 16px 52px;gap:36px}
+  .hero-title{font-size:clamp(2rem,9vw,2.6rem)}
+  .hero-sub{font-size:.95rem}
+  .hero-form{flex-direction:column;gap:10px}
+  .hero-form input,.btn-amber{width:100%;min-width:0;justify-content:center}
+  .hero-stats{gap:18px;flex-wrap:wrap}
+  .stat-sep{display:none}
+
+  /* Feed cards */
+  .feed-stack{max-width:100%}
+
+  /* Sections */
+  .section,.section-warm,.section-teal{padding:56px 16px}
+  .sec-title{font-size:clamp(1.7rem,7vw,2.2rem)}
+  .card{padding:22px 18px}
+  .bento-card{padding:22px 18px}
+
+  /* CTA */
+  .cta-section{padding:70px 16px}
+  .cta-form{flex-direction:column;align-items:stretch}
+  .cta-form input,.btn-white{width:100%;min-width:0}
+
+  /* Footer */
+  .footer{padding:40px 16px 24px}
+  .footer-links{flex-direction:column;gap:20px}
+  .footer-bot{gap:12px}
+}
+
+/* Tiny mobile */
+@media(max-width:360px){
+  .hero-title{font-size:1.9rem}
+  .sec-title{font-size:1.6rem}
+  .grid-3[style*="repeat(4"]{grid-template-columns:1fr !important}
+}

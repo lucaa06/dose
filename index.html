@@ -49,12 +49,15 @@
         </svg>
         <span>D.O.S.E.</span>
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" id="nav-links">
         <a href="#features">Features</a>
         <a href="#come-funziona">Come funziona</a>
         <a href="#community">Community</a>
         <a href="#waitlist" class="btn-nav">Ottieni la tua dose</a>
       </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -382,5 +385,31 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="../shared/gdpr.js"></script>
   <script src="main.js"></script>
+  <script>
+    (function(){
+      var btn = document.getElementById('nav-toggle');
+      var menu = document.getElementById('nav-links');
+      if(!btn||!menu) return;
+      btn.addEventListener('click', function(){
+        var open = menu.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open);
+      });
+      menu.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          menu.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        });
+      });
+      document.addEventListener('click', function(e){
+        if(!document.getElementById('nav').contains(e.target)){
+          menu.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
