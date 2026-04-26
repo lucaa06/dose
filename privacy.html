@@ -6,79 +6,75 @@
   <title>Privacy Policy — D.O.S.E.</title>
   <meta name="robots" content="noindex, follow">
   <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../shared/gdpr.css">
+  <style>
+    .legal-container { padding: 140px 40px 80px; max-width: 800px; margin: 0 auto; }
+    .legal-content h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin: 32px 0 16px; }
+    .legal-content p, .legal-content ul { font-size: 1.1rem; color: var(--ink-2); line-height: 1.7; margin-bottom: 16px; }
+    .legal-content ul { padding-left: 24px; }
+    .legal-content li { margin-bottom: 8px; }
+    .legal-content strong { color: var(--ink); }
+  </style>
 </head>
-<body class="app-layout legal-page" style="overflow-y: auto;">
+<body>
 
-  <nav id="nav" class="app-topbar" style="position: fixed; width: 100%; top: 0;">
-    <a href="/" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+  <header class="header">
+    <a href="/" class="header-logo">
       <svg width="34" height="22" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#ff6b48" stroke-width="2"/>
         <rect x="2" y="4" width="21" height="20" rx="0" fill="#ff6b48" opacity=".9"/>
         <rect x="2" y="4" width="10" height="20" rx="10" fill="#ff6b48"/>
-        <rect x="33" y="4" width="10" height="20" rx="10" fill="#ffb59e" opacity=".15"/>
         <circle cx="31" cy="14" r="2" fill="#ffb59e" opacity=".6"/>
         <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
       </svg>
-      <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--ink);">D.O.S.E.</span>
+      D.O.S.E.
     </a>
-    <a href="/" style="margin-left: auto; font-size: 14px; font-weight: 600; color: var(--ink-2); text-decoration: none;">Torna alla Home</a>
-  </nav>
+    <a href="/" style="font-weight: 600; font-size: 14px; color: var(--ink-2);">Torna alla Home</a>
+  </header>
 
-  <main style="padding: 120px 24px 80px; max-width: 800px; margin: 0 auto; width: 100%;">
-    <h1 class="dose-display" style="font-size: 36px; margin-bottom: 8px;">Privacy <span>Policy</span></h1>
+  <main class="legal-container">
+    <h1 style="font-family: var(--font-display); font-size: 3rem; margin-bottom: 8px;">Privacy Policy</h1>
     <p style="color: var(--ink-3); margin-bottom: 40px;">Ultimo aggiornamento: 26 Aprile 2026</p>
     
-    <div class="dc-card legal-content" style="padding: 40px; text-align: left; cursor: default; transform: none; box-shadow: var(--sh-sm);">
+    <div class="legal-content">
       <p>Benvenuto su D.O.S.E.. La tua privacy è per noi della massima importanza. Questo documento spiega come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali, in piena conformità con il Regolamento (UE) 2016/679 (GDPR).</p>
 
       <h3>1. Titolare del Trattamento</h3>
       <p>Il Titolare del trattamento dei dati personali raccolti attraverso questo sito web è D.O.S.E.. Per qualsiasi richiesta relativa alla privacy, puoi contattarci all'indirizzo email: <strong>privacy@thedose.it</strong>.</p>
 
       <h3>2. Dati Raccolti</h3>
-      <p>Durante la navigazione e l'interazione con la nostra pre-launch page, raccogliamo le seguenti tipologie di dati:</p>
       <ul>
         <li><strong>Dati forniti volontariamente:</strong> Quando ti iscrivi alla nostra waitlist, ci fornisci il tuo <strong>indirizzo email</strong>. Questo è l'unico dato di contatto diretto che acquisiamo.</li>
-        <li><strong>Dati di navigazione e analitici:</strong> Indirizzo IP (anonimizzato), tipo di browser, informazioni sul dispositivo e dati su come interagisci con il sito. Questi dati vengono raccolti tramite cookie analitici (es. Google Analytics) solo in seguito al tuo consenso esplicito.</li>
-        <li><strong>Dati tecnici e di sessione:</strong> Cookie tecnici indispensabili per registrare le preferenze sul consenso GDPR e per il corretto funzionamento del sito.</li>
+        <li><strong>Dati di navigazione e analitici:</strong> Indirizzo IP (anonimizzato), tipo di browser, informazioni sul dispositivo e dati su come interagisci con il sito.</li>
+        <li><strong>Dati tecnici e di sessione:</strong> Cookie tecnici indispensabili per registrare le preferenze sul consenso GDPR.</li>
       </ul>
 
       <h3>3. Finalità del Trattamento</h3>
-      <p>I tuoi dati sono trattati per i seguenti scopi:</p>
       <ul>
-        <li><strong>Gestione della Waitlist:</strong> L'indirizzo email fornito nel modulo viene inserito in un database sicuro ospitato su Supabase per aggiornarti sulle novità di D.O.S.E. e sul lancio ufficiale. <em>(Base giuridica: Consenso dell'interessato)</em>.</li>
-        <li><strong>Miglioramento dell'esperienza utente:</strong> I dati analitici ci servono per comprendere in forma aggregata l'utilizzo del sito e ottimizzarlo. <em>(Base giuridica: Consenso dell'interessato)</em>.</li>
-        <li><strong>Adempimenti normativi:</strong> Per rispettare gli obblighi di legge previsti in ambito civilistico o per la difesa in sede legale. <em>(Base giuridica: Obbligo di legge / Legittimo interesse)</em>.</li>
+        <li><strong>Gestione della Waitlist:</strong> L'indirizzo email fornito nel modulo viene inserito in un database sicuro ospitato su Supabase per aggiornarti sulle novità di D.O.S.E.</li>
+        <li><strong>Miglioramento dell'esperienza utente:</strong> I dati analitici ci servono per comprendere l'utilizzo del sito e ottimizzarlo.</li>
       </ul>
 
       <h3>4. Condivisione dei Dati e Fornitori</h3>
-      <p>Per erogare il nostro servizio ci avvaliamo di partner tecnologici rigorosamente selezionati:</p>
       <ul>
-        <li><strong>Supabase Inc.:</strong> Utilizzato per memorizzare in totale sicurezza l'indirizzo email inserito nel form di waitlist. I server di Supabase garantiscono i massimi standard crittografici.</li>
-        <li><strong>Google LLC (Google Analytics):</strong> Utilizzato, solo in presenza del tuo consenso, per fini statistici. I dati vengono raccolti con indirizzo IP anonimizzato.</li>
+        <li><strong>Supabase Inc.:</strong> Utilizzato per memorizzare in totale sicurezza l'indirizzo email.</li>
+        <li><strong>Google LLC (Google Analytics):</strong> Utilizzato solo in presenza del tuo consenso per fini statistici.</li>
       </ul>
-      <p>Non vendiamo né cediamo a terze parti i tuoi dati personali per finalità di marketing esterno.</p>
 
       <h3>5. Periodo di Conservazione</h3>
-      <p>L'indirizzo email raccolto per la waitlist viene conservato fino al completamento della fase di lancio del progetto, ed eliminato qualora tu decida di revocare l'iscrizione. I dati analitici raccolti con il consenso vengono conservati in forma aggregata per un massimo di 14 mesi.</p>
+      <p>L'indirizzo email raccolto per la waitlist viene conservato fino al completamento della fase di lancio del progetto. I dati analitici raccolti con il consenso vengono conservati in forma aggregata per un massimo di 14 mesi.</p>
 
       <h3>6. I tuoi Diritti</h3>
-      <p>Ai sensi degli artt. 15-22 del GDPR, hai il diritto in ogni momento di:</p>
-      <ul>
-        <li>Accedere ai tuoi dati personali e chiederne copia.</li>
-        <li>Chiederne la rettifica, la cancellazione (diritto all'oblio) o la limitazione del trattamento.</li>
-        <li>Opporti al trattamento o revocare il consenso prestato.</li>
-      </ul>
-      <p>Puoi esercitare questi diritti scrivendo a <strong>privacy@thedose.it</strong>.</p>
+      <p>Ai sensi degli artt. 15-22 del GDPR, hai il diritto in ogni momento di accedere ai tuoi dati personali, chiederne la rettifica o la cancellazione. Puoi esercitare questi diritti scrivendo a <strong>privacy@thedose.it</strong>.</p>
     </div>
   </main>
 
-  <footer style="text-align: center; padding: 24px; border-top: 1px solid var(--line); color: var(--ink-4); font-size: 13px;">
-    <p>© 2025 D.O.S.E. — Ogni giorno una dose di realtà positiva</p>
+  <footer class="footer">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie.html">Cookie Policy</a>
+    <a href="termini.html">Termini e Condizioni</a>
+    <span style="margin-left: auto;">© 2025 D.O.S.E.</span>
   </footer>
 
 </body>

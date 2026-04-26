@@ -8,256 +8,91 @@
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../shared/gdpr.css">
+  
+  <!-- React & Babel for rendering JSX components -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="app-layout">
+<body>
 
-  <!-- SIDEBAR (Left) -->
-  <aside class="app-sidebar" id="sidebar">
-    <div style="padding: 4px 8px 24px; display: flex; align-items: center; gap: 10px;">
+  <header class="header">
+    <div class="header-logo">
       <svg width="34" height="22" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#ff6b48" stroke-width="2"/>
         <rect x="2" y="4" width="21" height="20" rx="0" fill="#ff6b48" opacity=".9"/>
         <rect x="2" y="4" width="10" height="20" rx="10" fill="#ff6b48"/>
-        <rect x="33" y="4" width="10" height="20" rx="10" fill="#ffb59e" opacity=".15"/>
         <circle cx="31" cy="14" r="2" fill="#ffb59e" opacity=".6"/>
         <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
       </svg>
-      <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--ink);">D.O.S.E.</span>
+      D.O.S.E.
     </div>
+  </header>
 
-    <div class="nav-heading">Discover</div>
-    <a href="#" class="nav-item active">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      Feed
-    </a>
-    <a href="#features" class="nav-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-      Trending
-    </a>
-    <a href="#community" class="nav-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      Explore
-    </a>
-
-    <div class="nav-heading">You</div>
-    <a href="#" class="nav-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      Messages <span class="nav-badge">3</span>
-    </a>
-    <a href="#" class="nav-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-      Notifications <span class="nav-badge">12</span>
-    </a>
-    <a href="#" class="nav-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
-      Saved
-    </a>
-    <a href="#" class="nav-item">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      Donations
-    </a>
-
-    <div style="margin-top: auto; padding-top: 24px;">
-      <div style="font-size: 11px; font-weight: 600; color: var(--ink-4); text-transform: uppercase; margin-bottom: 10px;">Legale</div>
-      <a href="privacy.html" class="nav-item" style="padding: 6px 14px; font-size: 13px;">Privacy Policy</a>
-      <a href="cookie.html" class="nav-item" style="padding: 6px 14px; font-size: 13px;">Cookie Policy</a>
-      <a href="termini.html" class="nav-item" style="padding: 6px 14px; font-size: 13px;">Termini e Condizioni</a>
-      <a href="#" class="nav-item" style="padding: 6px 14px; font-size: 13px;" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Impostazioni Cookie</a>
-    </div>
-  </aside>
-
-  <!-- MAIN FEED (Center) -->
-  <main class="app-main">
-    <header class="app-topbar">
-      <button class="mobile-nav-toggle" id="nav-toggle">
-        <span></span><span></span><span></span>
-      </button>
-      <div style="flex: 1;">
-        <h1 class="dose-display" style="font-size: 22px; color: var(--ink); margin: 0; line-height: 1;">Today's dose</h1>
-        <div style="font-size: 12.5px; color: var(--ink-3); margin-top: 4px;">Verified positive news, picked for you</div>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        AI Verified News
       </div>
-      <div style="display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); color: var(--ink-3); font-size: 13px; width: 240px;" class="hide-mobile">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        Search good news...
-      </div>
-    </header>
-
-    <div class="feed-content">
+      <h1>Good news,<br>verified daily.</h1>
+      <p>Esplora il primo social network progettato per farti stare bene. Solo notizie positive, storie ispiratrici e aggiornamenti sul mondo verificati dall'AI.</p>
       
-      <!-- Prominent Waitlist Section integrated in the feed -->
-      <div class="waitlist-card">
-        <h2>Il social che ti dà notizie vere, positive e verificate</h2>
-        <p style="font-size: 16px; opacity: 0.9; margin-bottom: 24px; max-width: 500px; line-height: 1.6;">
-          D.O.S.E. è la piattaforma social basata sull'ottimismo. L'AI verifica ogni storia. Unisciti agli oltre 8.500 utenti in attesa per ricevere la tua dose quotidiana di realtà positiva.
-        </p>
-        <form class="waitlist-form" id="form-hero">
-          <input type="email" placeholder="Inserisci la tua email" required>
-          <button type="submit">Entra nella Waitlist</button>
-        </form>
-        <div style="margin-top: 16px; font-size: 13px; opacity: 0.8; font-family: var(--font-mono);">
-          Gratis · Nessuna carta di credito · Solo buone notizie
-        </div>
-      </div>
-
-      <!-- Filter Strip -->
-      <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
-        <button class="dose-pill active">All</button>
-        <button class="dose-pill">Environment</button>
-        <button class="dose-pill">Health</button>
-        <button class="dose-pill">Science</button>
-        <button class="dose-pill">Education</button>
-        <button class="dose-pill">Human Rights</button>
-      </div>
-
-      <!-- Post Grid Replica -->
-      <div class="post-grid">
-        
-        <div class="dc-card">
-          <div class="post-header">
-            <div class="avatar av-teal">MT</div>
-            <div style="flex: 1;">
-              <div style="font-size: 14px; font-weight: 600; color: var(--ink);">Marco T.</div>
-              <div style="font-size: 12px; color: var(--ink-3);">2 mins ago</div>
-            </div>
-            <div class="post-verified">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI Verified
-            </div>
-          </div>
-          <p style="font-size: 15px; color: var(--ink-2); line-height: 1.6; margin-bottom: 16px;">
-            🌱 Piantati 2 milioni di alberi nel Sahara: il deserto si fa verde. Il progetto sahel mostra risultati sorprendenti dopo 3 anni.
-          </p>
-          <div style="display: flex; gap: 16px; font-size: 13px; color: var(--ink-3); margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line);">
-            <span>♥ 1.2k</span> <span>💬 234</span> <span>🔁 892</span>
-          </div>
-        </div>
-
-        <div class="dc-card">
-          <div class="post-header">
-            <div class="avatar av-rose">SL</div>
-            <div style="flex: 1;">
-              <div style="font-size: 14px; font-weight: 600; color: var(--ink);">Sofia L.</div>
-              <div style="font-size: 12px; color: var(--ink-3);">15 mins ago</div>
-            </div>
-            <div class="post-verified">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI Verified
-            </div>
-          </div>
-          <p style="font-size: 15px; color: var(--ink-2); line-height: 1.6; margin-bottom: 16px;">
-            🔬 Nuovo farmaco cura il 94% dei casi di leucemia infantile in fase sperimentale. Speranza reale per oltre 50.000 famiglie in tutto il mondo.
-          </p>
-          <div style="display: flex; gap: 16px; font-size: 13px; color: var(--ink-3); margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line);">
-            <span>♥ 3.4k</span> <span>💬 567</span> <span>🔁 2.1k</span>
-          </div>
-        </div>
-
-        <div class="dc-card">
-          <div class="post-header">
-            <div class="avatar av-amber">AV</div>
-            <div style="flex: 1;">
-              <div style="font-size: 14px; font-weight: 600; color: var(--ink);">Anna V.</div>
-              <div style="font-size: 12px; color: var(--ink-3);">1 hour ago</div>
-            </div>
-            <div class="post-verified">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> AI Verified
-            </div>
-          </div>
-          <p style="font-size: 15px; color: var(--ink-2); line-height: 1.6; margin-bottom: 16px;">
-            🎓 Prima generazione italiana di studentesse STEM supera i maschi per la prima volta. 58% di laureate in ingegneria al Politecnico.
-          </p>
-          <div style="display: flex; gap: 16px; font-size: 13px; color: var(--ink-3); margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line);">
-            <span>♥ 4.8k</span> <span>💬 891</span> <span>🔁 3.6k</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </main>
-
-  <!-- RIGHT RAIL (Right) -->
-  <aside class="app-right">
-    
-    <!-- Daily Dose progress -->
-    <div style="background: linear-gradient(135deg, #ffe2c0, #ffb59e); border-radius: var(--r-lg); padding: 20px; color: #3a2308;">
-      <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px;">
-        D.O.S.E. Status
-      </div>
-      <h3 class="dose-display" style="font-size: 20px; line-height: 1.2; margin-bottom: 12px;">
-        Pre-launch in corso
-      </h3>
-      <div style="height: 6px; background: rgba(58, 35, 8, 0.15); border-radius: 99px; overflow: hidden; margin-bottom: 10px;">
-        <div style="width: 85%; height: 100%; background: #3a2308; border-radius: 99px;"></div>
-      </div>
-      <div style="font-size: 13px; opacity: 0.8; font-weight: 500;">8.500+ iscritti alla waitlist</div>
-    </div>
-
-    <!-- Trending Tags -->
-    <div>
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-        <h4 class="dose-display" style="font-size: 16px; color: var(--ink);">Trending now</h4>
-        <span style="font-size: 12px; color: var(--ink-3); cursor: pointer;">see all</span>
-      </div>
-      
-      <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div style="display: flex; align-items: baseline; gap: 10px;">
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-4);">01</span>
-          <div style="flex: 1;">
-            <div style="font-size: 14px; font-weight: 600; color: var(--ink);">#renewables</div>
-            <div style="font-size: 12px; color: var(--ink-3);">12.4k posts</div>
-          </div>
-          <span style="font-size: 12px; color: var(--verified); font-weight: 600;">+8%</span>
-        </div>
-        <div style="display: flex; align-items: baseline; gap: 10px;">
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-4);">02</span>
-          <div style="flex: 1;">
-            <div style="font-size: 14px; font-weight: 600; color: var(--ink);">#mentalhealth</div>
-            <div style="font-size: 12px; color: var(--ink-3);">9.1k posts</div>
-          </div>
-          <span style="font-size: 12px; color: var(--verified); font-weight: 600;">+22%</span>
-        </div>
-        <div style="display: flex; align-items: baseline; gap: 10px;">
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-4);">03</span>
-          <div style="flex: 1;">
-            <div style="font-size: 14px; font-weight: 600; color: var(--ink);">#urbanforests</div>
-            <div style="font-size: 12px; color: var(--ink-3);">6.8k posts</div>
-          </div>
-          <span style="font-size: 12px; color: var(--verified); font-weight: 600;">+4%</span>
-        </div>
+      <form class="waitlist-form" id="form-hero">
+        <input type="email" placeholder="Inserisci la tua email" required>
+        <button type="submit">Entra nella Waitlist</button>
+      </form>
+      <div style="margin-top: 16px; font-size: 13px; color: var(--ink-3); display: flex; gap: 16px;">
+        <span>✓ 100% Gratis</span>
+        <span>✓ No Spam</span>
+        <span>✓ 8,500+ iscritti</span>
       </div>
     </div>
 
-    <!-- Donate CTA -->
-    <div style="background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px; margin-top: auto;">
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--dose-coral-deep)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--ink-3); text-transform: uppercase;">Community fund</span>
-      </div>
-      <div class="dose-display" style="font-size: 18px; color: var(--ink); line-height: 1.2; margin-bottom: 12px;">
-        €18,420 raised this week for Ocean Cleanup
-      </div>
-      <button style="width: 100%; height: 38px; border-radius: var(--r-md); background: var(--dose-coral); color: #fff; border: none; font-size: 14px; font-weight: 600; cursor: pointer;">Donate now</button>
+    <!-- The actual React App Mockup will be rendered here -->
+    <div class="hero-mockup" id="react-mockup-root">
+      <div style="opacity: 0.5; font-size: 14px;">Caricamento anteprima app...</div>
     </div>
+  </section>
 
-  </aside>
+  <footer class="footer">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie.html">Cookie Policy</a>
+    <a href="termini.html">Termini e Condizioni</a>
+    <a href="#" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Impostazioni Cookie</a>
+    <span style="margin-left: auto;">© 2025 D.O.S.E.</span>
+  </footer>
+
+  <!-- Load all the untracked JSX files in order -->
+  <script type="text/babel" src="shared.jsx"></script>
+  <script type="text/babel" src="ios-frame.jsx"></script>
+  <script type="text/babel" src="screens-mobile.jsx"></script>
+
+  <!-- Mount the React Mockup -->
+  <script type="text/babel">
+    function AppMockup() {
+      // Use the exact IOSDevice and MobileFeedItalian from the user's JSX files!
+      return (
+        <div style={{ transform: 'scale(0.9)', transformOrigin: 'center center' }}>
+          <IOSDevice width={375} height={812} dark={false}>
+            <MobileFeedItalian />
+          </IOSDevice>
+        </div>
+      );
+    }
+
+    // Give the external scripts a moment to parse and register globally
+    setTimeout(() => {
+      const rootElement = document.getElementById('react-mockup-root');
+      if (rootElement) {
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(<AppMockup />);
+      }
+    }, 800);
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="../shared/gdpr.js"></script>
   <script src="main.js"></script>
-  <script>
-    (function(){
-      var btn = document.getElementById('nav-toggle');
-      var sidebar = document.getElementById('sidebar');
-      if(!btn||!sidebar) return;
-      btn.addEventListener('click', function(e){
-        e.stopPropagation();
-        sidebar.classList.toggle('open');
-      });
-      document.addEventListener('click', function(e){
-        if(window.innerWidth <= 768 && !sidebar.contains(e.target) && !btn.contains(e.target)){
-          sidebar.classList.remove('open');
-        }
-      });
-    })();
-  </script>
 </body>
 </html>

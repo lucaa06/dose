@@ -6,73 +6,67 @@
   <title>Cookie Policy — D.O.S.E.</title>
   <meta name="robots" content="noindex, follow">
   <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../shared/gdpr.css">
+  <style>
+    .legal-container { padding: 140px 40px 80px; max-width: 800px; margin: 0 auto; }
+    .legal-content h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--ink); margin: 32px 0 16px; }
+    .legal-content p, .legal-content ul { font-size: 1.1rem; color: var(--ink-2); line-height: 1.7; margin-bottom: 16px; }
+    .legal-content ul { padding-left: 24px; }
+    .legal-content li { margin-bottom: 8px; }
+    .legal-content strong { color: var(--ink); }
+  </style>
 </head>
-<body class="app-layout legal-page" style="overflow-y: auto;">
+<body>
 
-  <nav id="nav" class="app-topbar" style="position: fixed; width: 100%; top: 0;">
-    <a href="/" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+  <header class="header">
+    <a href="/" class="header-logo">
       <svg width="34" height="22" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#ff6b48" stroke-width="2"/>
         <rect x="2" y="4" width="21" height="20" rx="0" fill="#ff6b48" opacity=".9"/>
         <rect x="2" y="4" width="10" height="20" rx="10" fill="#ff6b48"/>
-        <rect x="33" y="4" width="10" height="20" rx="10" fill="#ffb59e" opacity=".15"/>
         <circle cx="31" cy="14" r="2" fill="#ffb59e" opacity=".6"/>
         <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
       </svg>
-      <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--ink);">D.O.S.E.</span>
+      D.O.S.E.
     </a>
-    <a href="/" style="margin-left: auto; font-size: 14px; font-weight: 600; color: var(--ink-2); text-decoration: none;">Torna alla Home</a>
-  </nav>
+    <a href="/" style="font-weight: 600; font-size: 14px; color: var(--ink-2);">Torna alla Home</a>
+  </header>
 
-  <main style="padding: 120px 24px 80px; max-width: 800px; margin: 0 auto; width: 100%;">
-    <h1 class="dose-display" style="font-size: 36px; margin-bottom: 8px;">Cookie <span>Policy</span></h1>
+  <main class="legal-container">
+    <h1 style="font-family: var(--font-display); font-size: 3rem; margin-bottom: 8px;">Cookie Policy</h1>
     <p style="color: var(--ink-3); margin-bottom: 40px;">Ultimo aggiornamento: 26 Aprile 2026</p>
     
-    <div class="dc-card legal-content" style="padding: 40px; text-align: left; cursor: default; transform: none; box-shadow: var(--sh-sm);">
+    <div class="legal-content">
       <p>Questo documento spiega cosa sono i cookie e come li utilizziamo sul sito web della pre-launch page di D.O.S.E.. Ti invitiamo a leggere questa policy per capire come gestiamo i tuoi dati di navigazione in conformità alla Direttiva ePrivacy e al GDPR.</p>
 
       <h3>1. Cosa sono i Cookie</h3>
-      <p>I cookie sono stringhe di testo di piccole dimensioni che un sito web memorizza sul browser del tuo dispositivo (computer, tablet, smartphone) durante la navigazione. Vengono utilizzati per migliorare il funzionamento del sito, salvare le tue preferenze e ottenere dati statistici sull'uso della piattaforma.</p>
+      <p>I cookie sono stringhe di testo di piccole dimensioni che un sito web memorizza sul browser del tuo dispositivo durante la navigazione. Vengono utilizzati per migliorare il funzionamento del sito, salvare le tue preferenze e ottenere dati statistici sull'uso della piattaforma.</p>
 
       <h3>2. Quali Cookie utilizziamo</h3>
-      <p>Sul nostro sito utilizziamo esclusivamente due macro-categorie di cookie:</p>
-      
       <p><strong>2.1 Cookie Tecnici Strettamente Necessari</strong></p>
-      <p>Sono fondamentali per il corretto funzionamento del sito. Senza questi cookie, la pagina non può funzionare correttamente. Non richiedono il tuo consenso preventivo.</p>
       <ul>
         <li><strong>gdpr_consent</strong>: Utilizzato per memorizzare le tue scelte relative all'accettazione o al rifiuto dei cookie. Durata: 12 mesi.</li>
       </ul>
 
       <p><strong>2.2 Cookie Analitici e di Statistica (Terze Parti)</strong></p>
-      <p>Utilizziamo questi cookie solo ed esclusivamente se ci fornisci il consenso. Servono per raccogliere informazioni in forma anonima su come i visitatori utilizzano il nostro sito.</p>
       <ul>
-        <li><strong>_ga, _ga_* (Google Analytics)</strong>: Memorizzano un ID cliente anonimo per distinguere gli utenti e generare dati statistici sull'uso del sito. I dati IP vengono anonimizzati di default. Durata: 14 mesi.</li>
+        <li><strong>_ga, _ga_* (Google Analytics)</strong>: Memorizzano un ID cliente anonimo per distinguere gli utenti e generare dati statistici sull'uso del sito. Durata: 14 mesi.</li>
       </ul>
-
-      <p><strong>Non utilizziamo cookie di profilazione o di marketing per l'invio di pubblicità mirata.</strong></p>
 
       <h3>3. Il Form Supabase e i Cookie</h3>
-      <p>Il form di iscrizione alla nostra waitlist si collega in modo sicuro a <strong>Supabase</strong>. Questo processo avviene tramite API sicure e non imposta alcun cookie tracciante nel tuo browser. Le uniche informazioni memorizzate sono l'email inserita volontariamente.</p>
+      <p>Il form di iscrizione alla nostra waitlist si collega in modo sicuro a <strong>Supabase</strong>. Questo processo avviene tramite API sicure e non imposta alcun cookie tracciante nel tuo browser.</p>
 
       <h3>4. Come Gestire o Disabilitare i Cookie</h3>
-      <p>Puoi bloccare o cancellare i cookie direttamente dalle impostazioni del tuo browser:</p>
-      <ul>
-        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener" style="text-decoration: underline;">Google Chrome</a></li>
-        <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener" style="text-decoration: underline;">Apple Safari</a></li>
-      </ul>
-
-      <h3>5. Ulteriori Informazioni</h3>
-      <p>Per maggiori informazioni sul trattamento dei dati raccolti tramite cookie e su come esercitare i tuoi diritti, ti invitiamo a leggere la nostra <a href="privacy.html" style="color: var(--dose-coral); font-weight: 600; text-decoration: underline;">Privacy Policy</a>.</p>
+      <p>Puoi sempre modificare o revocare il tuo consenso ai cookie in qualsiasi momento cliccando sul link presente nel footer del nostro sito, o bloccando i cookie tramite le impostazioni del tuo browser web.</p>
     </div>
   </main>
 
-  <footer style="text-align: center; padding: 24px; border-top: 1px solid var(--line); color: var(--ink-4); font-size: 13px;">
-    <p>© 2025 D.O.S.E. — Ogni giorno una dose di realtà positiva</p>
+  <footer class="footer">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie.html">Cookie Policy</a>
+    <a href="termini.html">Termini e Condizioni</a>
+    <span style="margin-left: auto;">© 2025 D.O.S.E.</span>
   </footer>
 
 </body>
