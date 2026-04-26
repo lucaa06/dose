@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.O.S.E. — La tua dose quotidiana di realtà positiva</title>
+  <meta name="description" content="D.O.S.E. è il social network per condividere buone notizie verificate, contenuti positivi e storie che ispirano. Community, AI, donazioni.">
+  <meta name="keywords" content="buone notizie, social positivo, notizie verificate, community, benessere, ottimismo, Italia, donazioni, AI">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="D.O.S.E.">
+  <link rel="canonical" href="https://thedose.it">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thedose.it">
+  <meta property="og:title" content="D.O.S.E. — La tua dose quotidiana di realtà positiva">
+  <meta property="og:description" content="Notizie buone, verificate, condivise da una community che crede in un mondo migliore.">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../shared/gdpr.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"WebApplication","name":"D.O.S.E.","alternateName":"Daily Dose of Reality","url":"https://thedose.it","applicationCategory":"SocialNetworkingApplication","operatingSystem":"iOS, Android, Web","description":"Social network per condividere buone notizie verificate"},
+   {"@context":"https://schema.org","@type":"Organization","name":"D.O.S.E.","url":"https://thedose.it","foundingDate":"2025","addressCountry":"IT"}]
+  </script>
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <!-- LOGO: capsula/pillola con sole/goccia - D.O.S.E. -->
+      <a href="/" class="logo">
+        <svg width="44" height="28" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Capsula pillola: metà sinistra -->
+          <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#F59E0B" stroke-width="2"/>
+          <rect x="2" y="4" width="21" height="20" rx="0" fill="#F59E0B" opacity=".9"/>
+          <rect x="2" y="4" width="10" height="20" rx="10" fill="#F59E0B"/>
+          <!-- Metà destra capsula -->
+          <rect x="23" y="4" width="10" height="20" rx="10" fill="none"/>
+          <rect x="33" y="4" width="10" height="20" rx="10" fill="#F43F5E" opacity=".15"/>
+          <!-- Linea divisoria -->
+          <line x1="22" y1="4" x2="22" y2="24" stroke="#FFF" stroke-width="1.5" opacity=".5"/>
+          <!-- Puntini D.O.S.E. piccoli nella metà destra -->
+          <circle cx="31" cy="14" r="2" fill="#F43F5E" opacity=".6"/>
+          <!-- Icona sole nella metà sinistra -->
+          <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
+          <path d="M12 7 L12 5M12 21 L12 23M5 14 L3 14M21 14 L19 14M7 9 L5.5 7.5M18 9 L19.5 7.5" stroke="white" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+        </svg>
+        <span>D.O.S.E.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#come-funziona">Come funziona</a>
+        <a href="#community">Community</a>
+        <a href="#waitlist" class="btn-nav">Ottieni la tua dose</a>
+      </nav>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────── -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge reveal-up">
+        ☀️ Daily Dose of Reality
+      </div>
+      <h1 class="hero-title reveal-up" style="--d:.08s">
+        Il social che ti dà<br>
+        <em>notizie vere,</em><br>
+        positive e verificate
+      </h1>
+      <p class="hero-sub reveal-up" style="--d:.16s">
+        D.O.S.E. è la piattaforma social per condividere buone notizie verificate dall'AI,
+        storie che ispirano e contenuti positivi. Perché il mondo ha più cose belle di quelle che vedi.
+      </p>
+      <form class="hero-form reveal-up" style="--d:.24s" id="form-hero">
+        <input type="email" placeholder="La tua email" required>
+        <button type="submit" class="btn-amber">
+          Unisciti ora
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+      <p class="form-note reveal-up" style="--d:.3s">Gratis · Nessuna carta · Solo buone notizie</p>
+      <div class="hero-stats reveal-up" style="--d:.38s">
+        <div class="stat"><span class="stat-n" data-target="8500">0</span><span class="stat-l">In attesa</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-n">98%</span><span class="stat-l">Verificate AI</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-n">0</span><span class="stat-l">Notizie false</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="feed-stack">
+        <div class="feed-card reveal-up" style="--d:.2s">
+          <div class="feed-header">
+            <div class="feed-avatar av-teal">MT</div>
+            <div class="feed-meta">
+              <div class="feed-author">Marco T.</div>
+              <div class="feed-time">2 minuti fa</div>
+            </div>
+            <div class="feed-verified">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Verificato
+            </div>
+          </div>
+          <div class="feed-content">🌱 Piantati 2 milioni di alberi nel Sahara: il deserto si fa verde. Il progetto sahel mostra risultati sorprendenti dopo 3 anni.</div>
+          <div class="feed-reactions">
+            <span class="reaction">🌟 1.2k</span>
+            <span class="reaction">💬 234</span>
+            <span class="reaction">🔁 892</span>
+          </div>
+        </div>
+
+        <div class="feed-card reveal-up" style="--d:.35s">
+          <div class="feed-header">
+            <div class="feed-avatar av-rose">SL</div>
+            <div class="feed-meta">
+              <div class="feed-author">Sofia L.</div>
+              <div class="feed-time">15 minuti fa</div>
+            </div>
+            <div class="feed-verified">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Verificato
+            </div>
+          </div>
+          <div class="feed-content">🔬 Nuovo farmaco cura il 94% dei casi di leucemia infantile in fase sperimentale. Speranza per 50.000 famiglie.</div>
+          <div class="feed-reactions">
+            <span class="reaction">🌟 3.4k</span>
+            <span class="reaction">💬 567</span>
+            <span class="reaction">🔁 2.1k</span>
+          </div>
+        </div>
+
+        <div class="feed-card reveal-up" style="--d:.5s">
+          <div class="feed-header">
+            <div class="feed-avatar av-amber">AV</div>
+            <div class="feed-meta">
+              <div class="feed-author">Anna V.</div>
+              <div class="feed-time">1 ora fa</div>
+            </div>
+            <div class="feed-verified">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              Verificato
+            </div>
+          </div>
+          <div class="feed-content">🎓 Prima generazione italiana di studentesse STEM supera i maschi per la prima volta. 58% di laureate in ingegneria.</div>
+          <div class="feed-reactions">
+            <span class="reaction">🌟 4.8k</span>
+            <span class="reaction">💬 891</span>
+            <span class="reaction">🔁 3.6k</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COSA SIGNIFICA D.O.S.E. ─────── -->
+  <section class="section-warm" id="dose-meaning">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
+        <span class="chip chip-amber">Il significato</span>
+        <h2 class="sec-title">Ogni lettera <span>conta</span></h2>
+      </div>
+      <div class="grid-3" style="grid-template-columns:repeat(4,1fr)">
+        <div class="card reveal" style="text-align:center">
+          <!-- D: Daily -->
+          <div class="card-icon icon-amber" style="margin:0 auto 16px">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="4" width="24" height="24" rx="6" stroke="#F59E0B" stroke-width="1.5" fill="#F59E0B" opacity=".1"/>
+              <text x="16" y="22" font-family="Playfair Display,serif" font-weight="800" font-size="18" fill="#F59E0B" text-anchor="middle">D</text>
+            </svg>
+          </div>
+          <h3>Daily</h3>
+          <p>Una dose quotidiana di contenuti positivi selezionati per te dall'AI.</p>
+        </div>
+        <div class="card reveal" style="--d:.08s;text-align:center">
+          <!-- O: Of -->
+          <div class="card-icon icon-rose" style="margin:0 auto 16px">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" stroke="#F43F5E" stroke-width="1.5" fill="#F43F5E" opacity=".1"/>
+              <text x="16" y="22" font-family="Playfair Display,serif" font-weight="800" font-size="18" fill="#F43F5E" text-anchor="middle">O</text>
+            </svg>
+          </div>
+          <h3>Of</h3>
+          <p>Una raccolta curata di storie vere che fanno bene all'umore e all'anima.</p>
+        </div>
+        <div class="card reveal" style="--d:.16s;text-align:center">
+          <!-- S: Stories -->
+          <div class="card-icon icon-teal" style="margin:0 auto 16px">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+              <path d="M8 6 Q4 6 4 10 L4 22 Q4 26 8 26 L24 26 Q28 26 28 22 L28 10 Q28 6 24 6 Z" stroke="#0D9488" stroke-width="1.5" fill="#0D9488" opacity=".1"/>
+              <text x="16" y="22" font-family="Playfair Display,serif" font-weight="800" font-size="18" fill="#0D9488" text-anchor="middle">S</text>
+            </svg>
+          </div>
+          <h3>Stories</h3>
+          <p>Storie reali da tutto il mondo che ispirano e dimostrano il bello che esiste.</p>
+        </div>
+        <div class="card reveal" style="--d:.24s;text-align:center">
+          <!-- E: Everyday -->
+          <div class="card-icon icon-amber" style="margin:0 auto 16px;background:#FFF1F4">
+            <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+              <path d="M4 16 Q4 4 16 4 Q28 4 28 16 Q28 28 16 28 Q4 28 4 16Z" stroke="#FBBF24" stroke-width="1.5" fill="#FBBF24" opacity=".1"/>
+              <text x="16" y="22" font-family="Playfair Display,serif" font-weight="800" font-size="18" fill="#FBBF24" text-anchor="middle">E</text>
+            </svg>
+          </div>
+          <h3>Everyday</h3>
+          <p>Ogni giorno un nuovo motivo per sorridere e credere in un futuro migliore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ──────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="chip chip-amber">Features</span>
+        <h2 class="sec-title">La piattaforma del<br><span>benessere informativo</span></h2>
+      </div>
+      <div class="bento">
+        <div class="bento-card reveal">
+          <div class="bento-icon icon-teal">
+            <!-- Icona: scudo con spunta = verifica AI -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3 L28 8 L28 18 Q28 26 16 30 Q4 26 4 18 L4 8 Z" fill="#0D9488" opacity=".12" stroke="#0D9488" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 16 L14 20 L22 12" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Verifica AI</h4>
+          <p>Ogni notizia è analizzata dall'AI prima della pubblicazione. Zero fake news garantito.</p>
+        </div>
+        <div class="bento-card span2 reveal" style="--d:.05s">
+          <div style="display:flex;align-items:flex-start;gap:20px">
+            <div class="bento-icon icon-amber" style="flex-shrink:0">
+              <!-- Icona: cuore con moneta = donazioni -->
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                <path d="M16 26 Q4 18 4 11 Q4 5 10 5 Q13 5 16 8 Q19 5 22 5 Q28 5 28 11 Q28 18 16 26Z" fill="#F59E0B" opacity=".15" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="16" cy="15" r="4" fill="#F59E0B" opacity=".3" stroke="#F59E0B" stroke-width="1"/>
+                <text x="16" y="18" font-family="sans-serif" font-weight="700" font-size="7" fill="#F59E0B" text-anchor="middle">€</text>
+              </svg>
+            </div>
+            <div>
+              <h4>Donazioni Integrate</h4>
+              <p>Dona direttamente alle cause che ami senza uscire dall'app. Ogni like può trasformarsi in un gesto concreto per il mondo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bento-card reveal" style="--d:.1s">
+          <div class="bento-big-num">+8k</div>
+          <h4>Utenti in attesa</h4>
+          <p>Community in crescita di persone che credono nel potere delle buone notizie.</p>
+        </div>
+        <div class="bento-card reveal" style="--d:.15s">
+          <div class="bento-icon icon-rose">
+            <!-- Icona: stelle = content score -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4 L18.5 12 L27 12 L20.5 17 L23 25 L16 20 L9 25 L11.5 17 L5 12 L13.5 12 Z" fill="#F43F5E" opacity=".15" stroke="#F43F5E" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Content Score</h4>
+          <p>Ogni contenuto ha un punteggio di positivittà, veridicità e impatto.</p>
+        </div>
+        <div class="bento-card reveal" style="--d:.2s">
+          <div class="bento-icon icon-teal">
+            <!-- Icona: cerchio persone = community -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="11" stroke="#0D9488" stroke-width="1.5" fill="none"/>
+              <circle cx="16" cy="12" r="3.5" fill="#0D9488" opacity=".3" stroke="#0D9488" stroke-width="1"/>
+              <path d="M9 24 Q9 19 16 19 Q23 19 23 24" stroke="#0D9488" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Community</h4>
+          <p>Forum tematici, eventi live e gruppi per ogni interesse positivo.</p>
+        </div>
+        <div class="bento-card reveal" style="--d:.25s">
+          <div class="bento-icon" style="background:#FFF1F4">
+            <!-- Icona: monetizzazione/coin -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="11" fill="#F43F5E" opacity=".12" stroke="#F43F5E" stroke-width="1.5"/>
+              <path d="M13 20 Q10 20 10 16 Q10 12 13 12 L16 12 Q20 12 20 16 Q20 20 16 20 Z" fill="#F43F5E" opacity=".2" stroke="#F43F5E" stroke-width="1"/>
+              <text x="16" y="19" font-family="sans-serif" font-weight="700" font-size="9" fill="#F43F5E" text-anchor="middle">€</text>
+            </svg>
+          </div>
+          <h4>Monetizzazione</h4>
+          <p>I creator di contenuti positivi vengono ricompensati dalla community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COME FUNZIONA ─────────────── -->
+  <section class="section-teal" id="come-funziona">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="chip chip-teal">Come funziona</span>
+        <h2 class="sec-title">La tua dose quotidiana<br>in <span class="teal">3 passi</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="card-icon icon-amber">
+            <!-- Passo 1: radar/scan -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="11" stroke="#F59E0B" stroke-width="1.5" fill="none"/>
+              <circle cx="16" cy="16" r="7" stroke="#F59E0B" stroke-width="1" fill="none" opacity=".5"/>
+              <circle cx="16" cy="16" r="3" fill="#F59E0B"/>
+              <path d="M16 16 L24 10" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+            </svg>
+          </div>
+          <h3>Scopri</h3>
+          <p>L'AI scansiona migliaia di fonti affidabili ogni giorno e seleziona solo le notizie vere e positive.</p>
+        </div>
+        <div class="card reveal" style="--d:.1s">
+          <div class="card-icon icon-teal">
+            <!-- Passo 2: check verifica -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 3 L28 8 L28 18 Q28 26 16 30 Q4 26 4 18 L4 8 Z" fill="#0D9488" opacity=".12" stroke="#0D9488" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M10 16 L14 20 L22 12" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Verifica</h3>
+          <p>Ogni contenuto viene verificato da AI e community prima di apparire nel tuo feed. Nessun compromesso.</p>
+        </div>
+        <div class="card reveal" style="--d:.2s">
+          <div class="card-icon icon-rose">
+            <!-- Passo 3: condividi/cuore -->
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 26 Q4 18 4 11 Q4 5 10 5 Q13 5 16 9 Q19 5 22 5 Q28 5 28 11 Q28 18 16 26Z" fill="#F43F5E" opacity=".15" stroke="#F43F5E" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M13 14 L19 14M16 11 L16 17" stroke="#F43F5E" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+            </svg>
+          </div>
+          <h3>Condividi</h3>
+          <p>Diffondi positività, dona alle cause che ami e trasforma ogni like in un'azione concreta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────── -->
+  <section class="cta-section" id="waitlist">
+    <div class="cta-inner">
+      <h2>Il mondo ha più cose belle<br>di quelle che vedi</h2>
+      <p>Unisciti alla community D.O.S.E. e ricevi ogni giorno la tua dose di realtà positiva.</p>
+      <form class="cta-form" id="form-cta">
+        <input type="email" placeholder="La tua email" required>
+        <button type="submit" class="btn-white">Ottieni la tua dose →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <svg width="36" height="22" viewBox="0 0 44 28" fill="none">
+            <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#F59E0B" stroke-width="2"/>
+            <rect x="2" y="4" width="21" height="20" rx="0" fill="#F59E0B" opacity=".9"/>
+            <rect x="2" y="4" width="10" height="20" rx="10" fill="#F59E0B"/>
+            <line x1="22" y1="4" x2="22" y2="24" stroke="#FFF" stroke-width="1.5" opacity=".5"/>
+            <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
+          </svg>
+          <span>D.O.S.E.</span>
+        </a>
+        <p>Daily Dose of Reality — Storie vere che fanno bene.</p>
+      </div>
+      <div class="footer-links">
+        <div class="fcol"><h5>Prodotto</h5><a href="#features">Features</a><a href="#come-funziona">Come funziona</a><a href="#waitlist">Unisciti</a></div>
+        <div class="fcol"><h5>Azienda</h5><a href="#">Chi siamo</a><a href="#">Blog</a><a href="#">Contatti</a></div>
+        <div class="fcol"><h5>Legale</h5><a href="#" data-legal="privacy">Privacy Policy</a><a href="#" data-legal="cookie">Cookie Policy</a><a href="#" data-legal="terms">Termini e Condizioni</a><a href="#" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Gestisci Cookie</a></div>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <p>© 2025 D.O.S.E. — Ogni giorno una dose di realtà positiva</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="../shared/gdpr.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
