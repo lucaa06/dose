@@ -4,93 +4,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D.O.S.E. — La tua dose quotidiana di realtà positiva</title>
-  <meta name="description" content="D.O.S.E. è il social network per condividere buone notizie verificate, contenuti positivi e storie che ispirano.">
+  <meta name="description" content="D.O.S.E. è il primo social network per condividere buone notizie verificate, contenuti positivi e storie che ispirano.">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../shared/gdpr.css">
-  
-  <!-- React & Babel for rendering JSX components -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
-    <div class="header-logo">
-      <svg width="34" height="22" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#ff6b48" stroke-width="2"/>
-        <rect x="2" y="4" width="21" height="20" rx="0" fill="#ff6b48" opacity=".9"/>
-        <rect x="2" y="4" width="10" height="20" rx="10" fill="#ff6b48"/>
-        <circle cx="31" cy="14" r="2" fill="#ffb59e" opacity=".6"/>
-        <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
-      </svg>
-      D.O.S.E.
+    <div class="wrap header-inner">
+      <a href="/" class="logo">
+        <svg width="34" height="22" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="40" height="20" rx="10" fill="none" stroke="#ff6b48" stroke-width="2"/>
+          <rect x="2" y="4" width="21" height="20" rx="0" fill="#ff6b48" opacity=".9"/>
+          <rect x="2" y="4" width="10" height="20" rx="10" fill="#ff6b48"/>
+          <circle cx="31" cy="14" r="2" fill="#ffb59e" opacity=".6"/>
+          <circle cx="12" cy="14" r="4" fill="white" opacity=".9"/>
+        </svg>
+        D.O.S.E.
+      </a>
+      <a href="#waitlist" class="header-btn">Unisciti</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-pill">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-        AI Verified News
+  <!-- Hero Section -->
+  <section class="hero" id="waitlist">
+    <div class="hero-glow"></div>
+    <div class="wrap">
+      <div class="hero-pill reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        La piattaforma in pre-launch
       </div>
-      <h1>Good news,<br>verified daily.</h1>
-      <p>Esplora il primo social network progettato per farti stare bene. Solo notizie positive, storie ispiratrici e aggiornamenti sul mondo verificati dall'AI.</p>
+      <h1 class="reveal" style="transition-delay: 0.1s;">
+        Esci dal doomscrolling.<br>Entra in <span>D.O.S.E.</span>
+      </h1>
+      <p class="reveal" style="transition-delay: 0.2s;">
+        Il primo social network progettato per farti stare bene. Solo storie ispiratrici, buone notizie verificate dall'AI e una community costruita sull'ottimismo.
+      </p>
       
-      <form class="waitlist-form" id="form-hero">
-        <input type="email" placeholder="Inserisci la tua email" required>
-        <button type="submit">Entra nella Waitlist</button>
+      <form class="waitlist-form reveal" id="form-hero" style="transition-delay: 0.3s;">
+        <input type="email" placeholder="La tua email per la waitlist" required>
+        <button type="submit">Ottieni la tua dose</button>
       </form>
-      <div style="margin-top: 16px; font-size: 13px; color: var(--ink-3); display: flex; gap: 16px;">
-        <span>✓ 100% Gratis</span>
-        <span>✓ No Spam</span>
-        <span>✓ 8,500+ iscritti</span>
+      
+      <div class="hero-stats reveal" style="transition-delay: 0.4s;">
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 8,500+ iscritti</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> 100% Sicuro</div>
+        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> Completamente Gratis</div>
       </div>
-    </div>
-
-    <!-- The actual React App Mockup will be rendered here -->
-    <div class="hero-mockup" id="react-mockup-root">
-      <div style="opacity: 0.5; font-size: 14px;">Caricamento anteprima app...</div>
     </div>
   </section>
 
+  <!-- Explanation Bento Grid -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <h2 class="features-title reveal">Cosa rende unico D.O.S.E.?</h2>
+      
+      <div class="bento">
+        <!-- Card 1 -->
+        <div class="bento-card reveal">
+          <div class="bento-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3>Verificato dall'AI</h3>
+          <p>Basta fake news. Ogni storia e articolo postato su D.O.S.E. passa attraverso un rigoroso fact-checking algoritmico prima di apparire nel tuo feed.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bento-card reveal" style="transition-delay: 0.1s;">
+          <div class="bento-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Community Positiva</h3>
+          <p>Un ambiente sicuro, libero da hate speech e troll. L'algoritmo premia l'empatia, il supporto e le discussioni costruttive.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bento-card reveal" style="transition-delay: 0.2s;">
+          <div class="bento-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Impatto Reale</h3>
+          <p>Leggere fa bene al mondo. Una parte dei ricavi della piattaforma viene devoluta mensilmente a cause benefiche scelte dalla community.</p>
+        </div>
+
+        <!-- Large Card -->
+        <div class="bento-card col-2 bento-large reveal">
+          <div class="bento-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-9 5 18 3-10h6"/></svg>
+          </div>
+          <h3>Doomscrolling, ma al contrario</h3>
+          <p style="font-size: 1.25rem;">
+            I social media tradizionali sono programmati per tenerti incollato allo schermo usando rabbia e indignazione. D.O.S.E. inverte la rotta: ti forniamo solo contenuti che migliorano il tuo umore, ti ispirano ad agire e ti restituiscono fiducia nell'umanità.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bento-card reveal" style="transition-delay: 0.1s;">
+          <div class="bento-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Storie che contano</h3>
+          <p>Innovazione green, scoperte mediche, diritti umani e gesti di gentilezza quotidiana. Quello che merita davvero la tua attenzione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <h2 class="reveal">Il futuro dei social è ottimista</h2>
+      <p class="reveal" style="transition-delay: 0.1s;">Non farti sfuggire l'opportunità di essere tra i primissimi utenti al momento del lancio. Iscriviti oggi, è gratis per sempre.</p>
+      <form class="waitlist-form reveal" id="form-cta" style="transition-delay: 0.2s;">
+        <input type="email" placeholder="La tua email per la waitlist" required>
+        <button type="submit">Entra in D.O.S.E.</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="cookie.html">Cookie Policy</a>
-    <a href="termini.html">Termini e Condizioni</a>
-    <a href="#" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Impostazioni Cookie</a>
-    <span style="margin-left: auto;">© 2025 D.O.S.E.</span>
+    <div class="wrap">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookie.html">Cookie Policy</a>
+        <a href="termini.html">Termini e Condizioni</a>
+        <a href="#" onclick="event.preventDefault(); window.__gdprOpenSettings && window.__gdprOpenSettings()">Gestisci Cookie</a>
+      </div>
+      <p>© 2025 D.O.S.E. — Ogni giorno una dose di realtà positiva.</p>
+    </div>
   </footer>
 
-  <!-- Load all the untracked JSX files in order -->
-  <script type="text/babel" src="shared.jsx"></script>
-  <script type="text/babel" src="ios-frame.jsx"></script>
-  <script type="text/babel" src="screens-mobile.jsx"></script>
-
-  <!-- Mount the React Mockup -->
-  <script type="text/babel">
-    function AppMockup() {
-      // Use the exact IOSDevice and MobileFeedItalian from the user's JSX files!
-      return (
-        <div style={{ transform: 'scale(0.9)', transformOrigin: 'center center' }}>
-          <IOSDevice width={375} height={812} dark={false}>
-            <MobileFeedItalian />
-          </IOSDevice>
-        </div>
-      );
-    }
-
-    // Give the external scripts a moment to parse and register globally
-    setTimeout(() => {
-      const rootElement = document.getElementById('react-mockup-root');
-      if (rootElement) {
-        const root = ReactDOM.createRoot(rootElement);
-        root.render(<AppMockup />);
-      }
-    }, 800);
-  </script>
-
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="../shared/gdpr.js"></script>
   <script src="main.js"></script>
